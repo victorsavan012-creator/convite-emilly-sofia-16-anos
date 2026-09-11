@@ -4,21 +4,242 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#8b0050">
-  <title>16 anos da Emilly </title>
+
+  <title>16 anos da Emilly</title>
+
   <style>
-    *{box-sizing:border-box}body{margin:0;background:#f8f3ed;color:#72003f;font-family:Georgia,'Times New Roman',serif}.page{width:min(100%,720px);margin:auto;padding:16px 16px 28px}.card{overflow:hidden;border-radius:20px;background:#fffdf8;box-shadow:0 8px 28px rgba(92,0,50,.18)}.invite{display:block;width:100%;height:auto}.actions{display:grid;gap:12px;padding:20px}.btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:14px 18px;border-radius:999px;text-decoration:none;font-family:Arial,sans-serif;font-size:17px;font-weight:700;text-align:center}.confirm{background:#8b0050;color:#fff}.location{border:2px solid #8b0050;background:#fff;color:#8b0050}.note{margin:0;padding:0 20px 22px;text-align:center;font:14px/1.45 Arial,sans-serif;color:#695a62}@media(max-width:420px){.page{padding:0}.card{border-radius:0;box-shadow:none}.actions{padding:16px}}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f8f3ed;
+      color: #72003f;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      width: min(100%, 720px);
+      margin: auto;
+      padding: 16px 16px 28px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 20px;
+      background: #fffdf8;
+      box-shadow: 0 8px 28px rgba(92,0,50,.18);
+    }
+
+    .invite {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .confirm {
+      background: #8b0050;
+      color: #fff;
+    }
+
+    .location {
+      border: 2px solid #8b0050;
+      background: #fff;
+      color: #8b0050;
+    }
+
+    .guests-box {
+      display: none;
+      padding: 18px;
+      margin-top: 4px;
+      border-radius: 16px;
+      background: #f8edf3;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .guests-box p {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .guests-select {
+      width: 100%;
+      padding: 13px;
+      border: 2px solid #8b0050;
+      border-radius: 12px;
+      background: white;
+      color: #72003f;
+      font-size: 16px;
+    }
+
+    .whatsapp {
+      width: 100%;
+      margin-top: 12px;
+      background: #25D366;
+      color: white;
+    }
+
+    .note {
+      margin: 0;
+      padding: 0 20px 22px;
+      text-align: center;
+      font: 14px/1.45 Arial, sans-serif;
+      color: #695a62;
+    }
+
+    @media(max-width:420px) {
+      .page {
+        padding: 0;
+      }
+
+      .card {
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .actions {
+        padding: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <main class="page">
     <section class="card">
-      <img class="invite" src="WhatsApp%20Image%202026-09-01%20at%2018.51.55.jpeg" alt="Convite para os 16 anos da Emilly, sábado, 26 de setembro de 2026, às 19h30, na Pizza e Cia em Pitangueiras">
+
+      <img
+        class="invite"
+        src="WhatsApp%20Image%202026-09-01%20at%2018.51.55.jpeg"
+        alt="Convite para os 16 anos da Emilly"
+      >
+
       <div class="actions">
-           <a class="btn confirm" href="https://wa.me/5516993275291?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%2016%20anos%20da%20Emilly%20Sofia." target="_blank" rel="noopener">Confirmar presença</a>
-        <a class="btn location" href="https://maps.apple/p/SREN_rxy9CBQne" target="_blank" rel="noopener">Ver localização</a>
+
+        <!-- BOTÃO CONFIRMAR PRESENÇA -->
+        <button class="btn confirm" onclick="mostrarQuantidade()">
+          Confirmar presença
+        </button>
+
+        <!-- ESCOLHA DA QUANTIDADE -->
+        <div class="guests-box" id="guestsBox">
+
+          <p>
+            Quantas pessoas da sua casa vão?
+          </p>
+
+          <select class="guests-select" id="quantidade">
+            <option value="1">1 pessoa</option>
+            <option value="2">2 pessoas</option>
+            <option value="3">3 pessoas</option>
+            <option value="4">4 pessoas</option>
+            <option value="5">5 pessoas</option>
+            <option value="6">6 pessoas</option>
+            <option value="7">7 pessoas</option>
+            <option value="8">8 pessoas</option>
+            <option value="9">9 pessoas</option>
+            <option value="10">10 pessoas</option>
+            <option value="11">11 pessoas</option>
+            <option value="12">12 pessoas</option>
+            <option value="13">13 pessoas</option>
+            <option value="14">14 pessoas</option>
+            <option value="15">15 pessoas</option>
+            <option value="16">16 pessoas</option>
+            <option value="17">17 pessoas</option>
+            <option value="18">18 pessoas</option>
+            <option value="19">19 pessoas</option>
+            <option value="20">20 pessoas</option>
+          </select>
+
+          <button class="btn whatsapp" onclick="confirmarPresenca()">
+            Confirmar pelo WhatsApp
+          </button>
+
+        </div>
+
+        <!-- LOCALIZAÇÃO -->
+        <a
+          class="btn location"
+          href="https://maps.apple/p/SREN_rxy9CBQne"
+          target="_blank"
+          rel="noopener"
+        >
+          Ver localização
+        </a>
+
       </div>
-      <p class="note">Confirme sua presença até 20/09.</p>
+
+      <p class="note">
+        Confirme sua presença até 20/09.
+      </p>
+
     </section>
   </main>
+
+  <script>
+    function mostrarQuantidade() {
+      const box = document.getElementById("guestsBox");
+
+      box.style.display = "block";
+
+      box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+
+    function confirmarPresenca() {
+      const quantidade = document.getElementById("quantidade").value;
+
+      let texto;
+
+      if (quantidade == 1) {
+        texto =
+          "Olá! Confirmo minha presença no aniversário de 16 anos da Emilly Sofia. Irei com 1 pessoa.";
+      } else {
+        texto =
+          "Olá! Confirmo minha presença no aniversário de 16 anos da Emilly Sofia. Iremos em " +
+          quantidade +
+          " pessoas.";
+      }
+
+      const telefone = "5516993275291";
+
+      const link =
+        "https://wa.me/" +
+        telefone +
+        "?text=" +
+        encodeURIComponent(texto);
+
+      window.open(link, "_blank");
+    }
+  </script>
+
 </body>
 </html>
